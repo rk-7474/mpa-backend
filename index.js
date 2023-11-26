@@ -1,6 +1,6 @@
 import express from 'express';
 import getNews from './news.js'
-import { getTest, getTrain, getTratta } from './treni.js';
+import { getTrain, getTratta } from './treni.js';
 
 const timestamp = () => new Date().getTime();
 
@@ -31,15 +31,15 @@ app.get("/info", async (req, res) => { //http://localhost:3000/info?stazione=271
 
 app.listen(PORT, () => console.log("Server started"));
 
-const perf = async (cb) => {
-	const time = timestamp();
-  	await cb();
-	console.log("/test response in: ", timestamp() - time, "ms");
-}
+// const perf = async (cb) => {
+// 	const time = timestamp();
+//   	await cb();
+// 	console.log("/test response in: ", timestamp() - time, "ms");
+// }
 
-export const getTest = async () => {
-	await perf(async() =>{
-	  // console.log(moment().date())
-	  // let response = await fetch(`http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/cercaNumeroTreno/16701`).then(res => res.text())
-	})
-}
+// export const getTest = async () => {
+// 	await perf(async() =>{
+// 	  // console.log(moment().date())
+// 	  // let response = await fetch(`http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/cercaNumeroTreno/16701`).then(res => res.text())
+// 	})
+// }
