@@ -1,4 +1,5 @@
 import moment from 'moment';
+import fetch from "node-fetch";
 
 const REFRESH_TIME = 30 * 1000
 
