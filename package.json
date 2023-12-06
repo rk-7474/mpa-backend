@@ -4,5 +4,8 @@
     "express": "^4.18.2",
     "moment": "^2.29.4"
   },
+  "scripts": {
+    "start": "node --watch index.js"   
+  },
   "type": "module"
 }
